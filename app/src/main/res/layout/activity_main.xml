@@ -1,0 +1,183 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".MainActivity"
+    android:background="@drawable/bg_purple_gradient">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- 🔥 App Title -->
+        <TextView
+            android:id="@+id/titleText"
+            android:text="Sign Language AI"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:gravity="center"
+            android:letterSpacing="0.06"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 🔓 Logout -->
+        <Button
+            android:id="@+id/logoutBtn"
+            android:text="Logout"
+            android:textSize="14sp"
+            android:background="@drawable/btn_outline"
+            android:textColor="#FFFFFF"
+            android:elevation="6dp"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- 📷 CAMERA CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:radius="34dp"
+            android:elevation="18dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#66FFFFFF">
+
+            <androidx.camera.view.PreviewView
+                android:id="@+id/previewView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToOutline="true"/>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 📊 RESULT CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:radius="28dp"
+            android:elevation="14dp"
+            android:layout_marginBottom="20dp"
+            android:backgroundTint="#EEFFFFFF"
+            android:padding="18dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/resultText"
+                    android:text="Detected: -"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#222222"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/accuracyText"
+                    android:text="Accuracy: 0%"
+                    android:textSize="17sp"
+                    android:textColor="#555555"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- 🔊 SPEAK BUTTON -->
+        <Button
+            android:id="@+id/speakBtn"
+            android:text="🔊 Speak"
+            android:textSize="17sp"
+            android:background="@drawable/btn_primary"
+            android:textColor="@android:color/white"
+            android:elevation="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- 📤 UPLOAD BUTTON -->
+        <Button
+            android:id="@+id/uploadBtn"
+            android:text="📤 Upload Image / Video"
+            android:textSize="16sp"
+            android:background="@drawable/btn_secondary"
+            android:textColor="@android:color/white"
+            android:elevation="8dp"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginBottom="14dp"/>
+
+        <!-- 📜 GESTURE HISTORY BUTTON -->
+        <Button
+            android:id="@+id/historyBtn"
+            android:text="📜 Gesture History"
+            android:textSize="16sp"
+            android:background="@drawable/btn_outline"
+            android:textColor="#FFFFFF"
+            android:elevation="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="12dp"/>
+
+        <!-- 🎓 LEARN SIGN LANGUAGE BUTTON -->
+        <Button
+            android:id="@+id/learnBtn"
+            android:text="🎓 Learn Sign Language"
+            android:textSize="16sp"
+            android:background="@drawable/btn_outline"
+            android:textColor="#FFFFFF"
+            android:elevation="6dp"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginBottom="18dp"/>
+
+        <!-- 🌐 LANGUAGE CARD -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="26dp"
+            app:cardElevation="10dp"
+            app:cardBackgroundColor="#80FFFFFF"
+            android:padding="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:padding="12dp">
+
+                <Button
+                    android:id="@+id/tamilBtn"
+                    android:text="தமிழ்"
+                    android:textSize="15sp"
+                    android:background="@drawable/btn_outline"
+                    android:textColor="#673AB7"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="10dp"/>
+
+                <Button
+                    android:id="@+id/englishBtn"
+                    android:text="English"
+                    android:textSize="15sp"
+                    android:background="@drawable/btn_outline"
+                    android:textColor="#673AB7"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</ScrollView>

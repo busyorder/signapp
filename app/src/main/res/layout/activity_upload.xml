@@ -1,0 +1,149 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_purple_gradient">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="24dp"
+        app:cardCornerRadius="36dp"
+        app:cardElevation="14dp"
+        app:cardBackgroundColor="#BFE7DD">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="26dp">
+
+            <!-- 🔥 Title -->
+            <TextView
+                android:text="Upload Gesture"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="18dp"/>
+
+            <!-- 📷 / 🎥 Preview Card -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="220dp"
+                app:cardCornerRadius="28dp"
+                app:cardElevation="6dp"
+                app:cardBackgroundColor="#FFFFFF"
+                android:layout_marginBottom="18dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <!-- IMAGE PREVIEW -->
+                    <ImageView
+                        android:id="@+id/imagePreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:visibility="gone" />
+
+                    <!-- VIDEO PREVIEW -->
+                    <VideoView
+                        android:id="@+id/videoView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_gravity="center"
+                        android:visibility="gone" />
+
+                </FrameLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- 🔍 Detection Result -->
+            <TextView
+                android:id="@+id/resultText"
+                android:text="Detected: -"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#222222"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="6dp"/>
+
+            <TextView
+                android:id="@+id/accuracyText"
+                android:text="Accuracy: 0%"
+                android:textSize="15sp"
+                android:textColor="#444444"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_marginBottom="12dp"/>
+
+            <!-- 🌐 Language Toggle -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="12dp">
+
+                <Button
+                    android:id="@+id/englishBtn"
+                    android:text="English"
+                    android:background="@drawable/btn_outline"
+                    android:textColor="#673AB7"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/tamilBtn"
+                    android:text="தமிழ்"
+                    android:background="@drawable/btn_outline"
+                    android:textColor="#673AB7"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="48dp"/>
+            </LinearLayout>
+
+            <!-- 📤 Buttons -->
+            <Button
+                android:id="@+id/imageBtn"
+                android:text="Upload Image"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:background="@drawable/btn_purple_gradient"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_marginBottom="12dp"/>
+
+            <Button
+                android:id="@+id/videoBtn"
+                android:text="Upload Video"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:background="@drawable/btn_purple_gradient"
+                android:textColor="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"/>
+
+            <!-- ⏳ Progress -->
+            <ProgressBar
+                android:id="@+id/uploadProgress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

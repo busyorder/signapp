@@ -1,0 +1,44 @@
+<manifest package="com.busyorder.signapp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <!-- Android 13+ -->
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES"/>
+
+    <!-- Android 12 and below -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+        android:maxSdkVersion="32"/>
+
+
+    <application
+        android:allowBackup="true"
+        android:theme="@style/Theme.SignApp"
+        android:label="Sign App"
+        android:icon="@drawable/ic_app_sign_icon">
+
+        <activity android:name=".LoginActivity"/>
+        <activity android:name=".RegisterActivity"/>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".UploadActivity"/>
+
+        <activity android:name=".GestureHistoryActivity"/>
+        <activity android:name=".LearnSignActivity"/>
+        <activity android:name=".VideoPlayerActivity"/>
+
+
+        <activity android:name=".SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+    </application>
+</manifest>

@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "218100245855",
+    "firebase_url": "https://signapp-e4d2e-default-rtdb.firebaseio.com",
+    "project_id": "signapp-e4d2e",
+    "storage_bucket": "signapp-e4d2e.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:218100245855:android:15428f7d1d9ddce56cc2ea",
+        "android_client_info": {
+          "package_name": "com.busyorder.signapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBwGEwctNQ0PkOfL2Q6hnXcYfr8-hLJwVM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
